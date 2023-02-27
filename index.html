@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projet IoT Moussa Diallo</title>
+  </head>
+  <body>
+    <h1>Inclusions du code json dans html</h1>
+    <div id="json"></div>
+
+    <script>
+      // récupérer les données JSON à partir d'un fichier
+      fetch('mtam.json')
+        .then(response => response.json())
+        .then(mtam => {
+          // afficher les données JSON sur la page HTML
+          document.getElementById('json').innerHTML = JSON.stringify(mtam);
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>
